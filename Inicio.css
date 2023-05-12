@@ -15,7 +15,7 @@ body{
     background-size: cover;
     background-attachment: fixed;
     width: 100%;
-    height: 620px;
+    height: 700px;
 }
 
 /*Caja contenedora del menu*/
@@ -24,6 +24,7 @@ body{
     align-items: center;
     padding: 1rem;
     justify-content:space-around;
+    background-color: rgba(77, 14, 128, 0.895);
 }
 /*Logo*/
 .contenedor img{
@@ -56,11 +57,18 @@ body{
 }
 
 /*Contenido del header*/
-.contenedor_header{
+.contenedor_imagen{
     display: flex;
     justify-content: space-evenly;
-    padding: 100px 0px;
+    padding-top: 80px;
 }
+.contenedor_imagen > img{
+    width: 30%;
+}
+.contacto{
+    padding: 30px 630px;
+}
+
 /*Calendario*/
 .calendario{
     padding: 15px 0px;
