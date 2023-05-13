@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pintura y dibujo</title>
+    <style>
+        body {
+            background: rgb(53, 14, 101);
+            background: radial-gradient(circle, rgba(53, 14, 101, 1) 0%, rgba(100, 21, 150, 1) 35%, rgba(134, 41, 194, 1) 100%);
+        }
+
+        .contenedor {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            justify-content: space-around;
+            background-color: rgba(77, 14, 128, 0.895);
+        }
+
+        /*Logo*/
+        .contenedor img {
+            height: 80px;
+        }
+
+        /*menu de navegación*/
+        .menu ul>li {
+            list-style: none;
+            float: left;
+            padding: 0 12px;
+            font-size: 18px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu a:hover {
+            color: blue;
+        }
+
+        /*Redes sociales*/
+        .redes_sociales>a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .redes_sociales img {
+            height: 40px;
+            width: 40px;
+        }
+
+        /*contenedor de imagenes*/
+        .container {
+            position: relative;
+            width: 1000px;
+            margin: 150px;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 440px;
+            grid-gap: 40px;
+        }
+
+        .container .card {
+            position: relative;
+            background: black;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: 0.5s;
+        }
+
+        .card:hover {
+            transform: translateY(-20px);
+            box-shadow: 0 20px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .container .card .img-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+        }
+
+        .container .card:hover .img-box {
+            opacity: 0.5;
+        }
+
+        .container .card .img-box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .container .card .content {
+            position: absolute;
+            width: 100%;
+            height: 60%;
+            bottom: -100%;
+            padding: 20px;
+            padding-top: 60px;
+            box-sizing: border-box;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .container .card:hover .content {
+            bottom: 0;
+        }
+
+        /*color de fondo de la descripción*/
+        .container .card:nth-child(1) .content {
+            background: linear-gradient(0deg, orange, transparent);
+        }
+
+        .container .card:nth-child(2) .content {
+            background: linear-gradient(0deg, purple, transparent);
+        }
+
+        .container .card:nth-child(3) .content {
+            background: linear-gradient(0deg, brown, transparent);
+        }
+
+        /*descripcion de la imagen*/
+        .container .card .content h2 {
+            margin: 0 0 10px;
+            padding: 0;
+            color: white;
+            font-size: 20px;
+        }
+
+        .container .card .content h2 span {
+            color: yellow;
+            font-size: 16px;
+
+        }
+
+        .container .card .content p {
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-size: 16px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--Menú de navegación-->
+    <nav>
+        <div class="contenedor">
+            <img src="Logotipo.png" alt="">
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Instrumentos</a></li>
+                    <li><a href="#">Canto</a></li>
+                    <li><a href="#">Pintura y Dibujo</a></li>
+                    <li><a href="#">Galería</a></li>
+                    <li><a href="#">Sobre nosotros</a></li>
+                </ul>
+            </div>
+            <div class="redes_sociales">
+                <a href="#"><img src="whatsapp.png" alt=""></a>
+                <a href="#"></a><img src="facebook.png" alt="">
+                <a href="#"><img src="instagram.png" alt=""></a>
+            </div>
+        </div>
+    </nav>
+
+    <!--Galeria de arte-->
+    <main>
+        <!--Imagen 1-->
+        <div class="container">
+            <div class="card">
+                <div class="img-box">
+                    <img src="Pintura1.jpg">
+                </div>
+                <div class="content">
+                    <h2>Pajaro<br><span>Pintura 1</span></h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Iste repellendus necessitatibus inventore iusto fuga.</p>
+                </div>
+            </div>
+
+            <!--Imagen 2-->
+            <div class="card">
+                <div class="img-box">
+                    <img src="Pintura3.jpg">
+                </div>
+                <div class="content">
+                    <h2>Cuerpo Humano<br><span>Pintura 2</span></h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Iste repellendus necessitatibus inventore iusto fuga.</p>
+                </div>
+            </div>
+
+            <!--Imagen 3-->
+            <div class="card">
+                <div class="img-box">
+                    <img src="Pintura4.jpg">
+                </div>
+                <div class="content">
+                    <h2>Teclado<br><span>Pintura 3</span></h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Iste repellendus necessitatibus inventore iusto fuga.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
